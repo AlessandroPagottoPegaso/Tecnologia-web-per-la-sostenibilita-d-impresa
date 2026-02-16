@@ -1,1 +1,1 @@
-# Tecnologia-web-per-la-sostenibilit-d-impresa
+# Tecnologia web per la sostenibilit d'impresa
