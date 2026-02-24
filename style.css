@@ -1,0 +1,251 @@
+/* variabile colori globali*/
+:root {
+    --primary: #2e7d32;        /* Verde foresta */
+    --primary-light: #60ad5e;  /* Verde chiaro */
+    --accent: #fbc02d;         /* Giallo oro */
+    --text-dark: #333333;
+}
+
+/*reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* gestione sfondi bg con trasparenza */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.bg-home {
+    background-image: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('img/vegetation field.jpg');
+}
+
+body.bg-mission {
+    background-image: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('img/mission.jpg');
+}
+
+body.bg-data {
+    background-image: linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,0.60)), url('img/analysis data.jpg');
+}
+
+main {
+    flex: 1; /* footer fissato*/
+}
+
+/*navbar*/
+.navibar {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    padding: 0 30px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* Z-index alto per stare in top most*/
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s ease; /* Animazione hover menu */
+}
+
+.menu-items a:hover {
+    background-color: rgba(255,255,255,0.2); /* Effetto evidenziatore */
+}
+
+/*immagini header */
+header.intro, header.missione {
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    border-bottom: 5px solid var(--accent);
+    border-radius: 0 0 30px 30px;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+header.home-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/agricultural sunset.jpg');
+}
+
+header.mission-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/drone-with-man.jpg');
+}
+
+header.data-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/grain.jpg');
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* card e layout  */
+.container, section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 4px solid var(--primary-light);
+    
+    /* reset animazione */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Ombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animazione hover */
+}
+
+/* Effetto hover per le card: si alzano leggermente e l'ombra diventa più forte */
+.card:hover {
+    transform: translateY(-10px); /* movimento verticale */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* ombra più forte */
+    border-top-color: var(--primary); /*il bordo diventa più scuro */
+}
+
+.data-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+h2, h3, h4 { color: var(--primary); margin-bottom: 15px; }
+
+/*pulsanti */
+.btn-download {
+    display: block;
+    width: fit-content;
+    align-items: center ;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.btn-download:hover {
+    transform: scale(1.05); /*inggrandimento */
+    background-color: var(--primary-light);
+}
+
+.hash-code {
+    background: #eef2f3;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 20px;
+    border-left: 4px solid var(--accent);
+    word-break: break-all;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--primary);
+    color: rgba(255,255,255,0.8);
+    margin-top: 40px;
+}
+
+/* desgin responsivo per mobile */
+#menu-toggle, .menu-icon { display: none; }
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        background-color: var(--primary); 
+        padding: 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .menu-items li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-items a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1); /* Separatore tra le voci del menu */
+    }
+
+    /* Effetto hover più evidente su mobile: sfondo più chiaro */
+    .menu-items a:hover {
+        background-color: var(--primary-light); 
+    }
+
+    #menu-toggle:checked ~ .menu-items {
+        display: flex;
+    }
+    
+    h1 { font-size: 2rem; }
+    
+}
