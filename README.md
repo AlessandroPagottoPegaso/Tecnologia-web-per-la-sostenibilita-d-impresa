@@ -1,7 +1,7 @@
 # Tecnologia web per la sostenibilità d'impresa
 Il progetto prevede lo sviluppo di una pagina web del settore primario che comunichi le attività messe in campo da essa  nell' ambito della sostenibilità consentendo il download del report di sostenibilità.
 
-il progetto è suddivviso in 3 pagine web strutturate nel seguente modo:
+Il progetto è suddivviso in 3 pagine web strutturate nel seguente modo:
 
 Index.html = pagina dedicata alla presentazione dell' azienda e del report di sostenibilità.
 
@@ -11,7 +11,7 @@ Data.hmtl = dedicata alla visualizzazione degli obbiettivi raggiunti attraverso 
 
 directory img = contenitore delle immagini utilizzate. 
 
-directory assets= contenente con il report ufficiale dell' azienda.
+directory assets= contenitore con il report ufficiale dell' azienda.
 
-Matricola 0312301952
+Matricola N° 0312301952
 
